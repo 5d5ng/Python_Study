@@ -86,6 +86,19 @@ from random import *
 # print(randint(1,45)) # 1-45까지의 임의의 값 생성
 
 print("오프라인 스터디 모임 날짜는 매월 "+str(randint(4,28))+"일로 선정되었습니다.")
+
+lst = range(1,21) #1부터 20까지 숫자를 생성
+lst = list(lst) #리스트로 타입 변환
+
+shuffle(lst)
+print(lst)
+
+winner = sample(lst,4)
+print(type(winner))
+
+print('치킨 당첨자:{0}'.format(winner[0]))
+
+print('커피 당첨자:{0}'.format(winner[1:]))
 ```
 
 # 문자열 자료형
@@ -302,4 +315,101 @@ print(cabinet.items())
 #초기화
 cabinet.clear();
 print(cabinet);
+```
+
+# 집합
+
+```python
+#Set
+#중복안되고 순서가 없다
+
+my_set ={1,2,3,3,3}
+print(my_set)
+
+java = {"유재석","김태호","양세형"}
+python = set(["유재석","박명수"]) #set으로 감싸줌
+
+# 교집합 출력 즉 자바와 파이썬 둘다 가능한 사람
+print(java & python)
+print(java.intersection(python))
+
+# 합집합
+
+print(java | python)
+print(java.union(python))
+
+#차집합 자바는 할줄 알지만 파이썬을 할 줄 모르는 개발자
+print(java - python)
+print(java.difference(python))
+
+#python 할 줄 아는 사람 늘어남
+python.add("김태호")
+print(python)
+
+java.remove("김태호")
+print(java)
+```
+
+# If문
+
+```python
+weather = "미세먼지"
+if weather == "비":
+    print('우산을 챙기세요')
+elif weather == "미세먼지":
+    print('마스크를 챙기세요')
+else:
+    print('준비물 필요없어요')
+
+temp = int(input("기온은 어때요?"))
+if 30<=temp:
+    print('너무더워요. 나가지 마세요')
+elif 10 <= temp and temp <30:
+    print('괜찮은 날씨에요')
+elif 0<=temp<10: # and 
+    print('외투를 챙기세요')
+else:
+    print('추워요. 나가지 마세요')
+```
+
+# For문
+
+```python
+# print("대기번호 :1")
+# print("대기번호 :2")
+# print("대기번호 :3")
+# print("대기번호 :4")
+
+for wating_no in range(1,6): #  1 2 3 4 5
+    print("대기번호 :{0}".format(wating_no))
+
+starbucks =["아이언맨","그루트","토르"]
+
+for customer in starbucks:
+    print('{0}, 커피가 준비되었습니다.'.format(customer))
+```
+
+# While문
+
+```python
+#While
+customer ="토르"
+index = 5
+while index >=1:
+    print("{0}, 커피가 준비되었습니다. {1}번 남았어요.".format(customer,index))
+    index -= 1
+    if index == 0:
+        print('커피는 폐기처분되었습니다.')
+
+customer = "아이언맨"
+# index = 1
+# while True:
+#     print("{0}, 커피가 준비 되었습니다.".format(customer))
+#     index +=1 
+
+customer = "토르"
+person = 'Unknown'
+while person != customer:
+    print("{0},  커피가 준비되었습니다.".format(customer))
+    person = input("이름이 어떻게 되세요?")
 ```
