@@ -1,0 +1,9 @@
+
+#디폴트 값 설정
+def profile(name,age=17,main_lang="파이썬"):
+    print('이름: {0}\t나이:{1}\t 주 사용언어:{2}'
+     .format(name,age,main_lang))
+
+
+profile('유재석')
+profile('김태호',25,'자바')

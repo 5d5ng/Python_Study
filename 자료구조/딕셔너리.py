@@ -10,7 +10,7 @@ print(cabinet.get(5,'사용가능'))
 print(3 in cabinet) #True
 print(5 in cabinet) #False
 
-cabinet ={"A-3":"유재석","B-30":"김태호"}
+cabinet ={"A-3":"유재석" , "B-30":"김태호"}
 print(cabinet["A-3"])
 print(cabinet.get("B-30"))
 # 새 멤버 추가
