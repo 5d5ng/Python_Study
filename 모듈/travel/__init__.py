@@ -1,0 +1,1 @@
+__all__ = ["vietnam",'thailand']  #from import * 쓸때 어떤 모듈을 import 하게 해줄 것이닞 범위 설정
